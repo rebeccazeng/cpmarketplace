@@ -1,0 +1,32 @@
+body {
+  font: 14px "Arial", sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.dashboard {
+  background: #fff;
+  border: 1px solid #999;
+  height: 34px
+}
+
+.dashboard-option {
+  background: #fff;
+  border: 0px solid #999;
+  float: left;
+/*   font-size: 24px; */
+  font-weight: none;
+  line-height: 34px;
+  height: 34px;
+  padding: 0px 15px;
+/*   margin-top: -1px; */
+  text-align: center;
+/*   width: 34px; */
+}
+
+#first-menu-item {
+  font-weight: bold;
+}

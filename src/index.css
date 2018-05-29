@@ -7,13 +7,13 @@ ol, ul {
   padding-left: 30px;
 }
 
-.dashboard {
+.navbar {
   background: #fff;
   border: 1px solid #999;
   height: 34px
 }
 
-.dashboard-option {
+.navbar-option {
   background: #fff;
   border: 0px solid #999;
   float: left;
@@ -27,6 +27,21 @@ ol, ul {
 /*   width: 34px; */
 }
 
-#first-menu-item {
+#bold-item {
+  font-weight: bold;
+}
+
+#navbar-right {
+  text-align: right;
+  float: right;
+}
+
+.selectionBox {
+  text-align: center;
+  float: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em 2em;
+  border: 2px solid black;
   font-weight: bold;
 }

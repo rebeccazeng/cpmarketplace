@@ -45,10 +45,18 @@ class Navbar extends React.Component {
 class SelectionBox extends React.Component {
   render() {
     return (
-      <div className="selectionBox">
-       <div> CollegePrep is here to help you with all you need to improve your score. </div>
+    <div className="selectionBox">
+       <div id="bold-item"> {this.props.heading} </div>
+        <div>{this.props.p}</div>
+        <br />
+        <div className="testimony">
+          <div className="circle"></div>
+          <div>{this.props.testimonyText}</div>
+          <br />
+          <div>{this.props.testimonyPerson}</div>
+        </div>
         
-      </div>
+    </div>
       )
   }
 }
@@ -58,7 +66,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
-        <SelectionBox />
+        <SelectionBox heading="CollegePrep can provide help." p="Many students and tutors have benefited from the platform." testimonyText="&nbsp; This is great. &nbsp;" testimonyPerson="--John, RHS '18"/>
       </div>
     );
   }

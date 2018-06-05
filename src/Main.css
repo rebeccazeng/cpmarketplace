@@ -17,21 +17,18 @@ ol, ul {
   background: #fff;
   border: 0px solid #999;
   float: left;
-/*   font-size: 24px; */
   font-weight: none;
   line-height: 34px;
   height: 34px;
   padding: 0px 15px;
-/*   margin-top: -1px; */
   text-align: center;
-/*   width: 34px; */
 }
 
 #bold-item {
   font-weight: bold;
 }
 
-#navbar-right {
+.navbar-right {
   text-align: right;
   float: right;
 }
@@ -42,14 +39,21 @@ ol, ul {
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 2em 2em;
-  border: 1px solid black;
+  border: .1em solid black;
 }
 
 .circle {
-  height:100px;
-  width: 100px;
+  height: 7em;
+  width: 7em;
   border-radius: 50%;
+  margin-top: 1em;
   background-color: #3d9970;
+}
+
+.avatar {
+  height: 7em;
+  width: 7em;
+  border-radius: 50%;
 }
 
 .testimony {

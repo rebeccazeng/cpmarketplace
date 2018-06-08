@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./Main.css"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+import "../node_modules/jquery/src/jquery.js"
+import "../node_modules/popper.js/dist/popper.min.js"
+
 
 class NavbarOption extends React.Component {
   render() {
@@ -15,53 +20,25 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div className="navbar">
-        <div className="navbar-option" id="bold-item">
-          {this.renderNavbarOption("CollegePrep.org", "https://collegeprep.org")}
-        </div>
-        <div className="navbar-option">
-          {this.renderNavbarOption("Find a Tutor", "https://collegeprep.org/#findatutor")}
-        </div>
-        <div className="navbar-option">
-          {this.renderNavbarOption("Become a Tutor", "https://collegeprep.org/#becomeatutor")}
-        </div>
-        <div className="navbar-option">
-          {this.renderNavbarOption("Pricing", "https://collegeprep.org/#pricing")}
-        </div>
-        <div className="navbar-option">
-          {this.renderNavbarOption("About", "https://collegeprep.org/#about")}
-        </div>
-
-        <div className="navbar-option navbar-right">
-          {this.renderNavbarOption("Sign Up", "https://collegeprep.org/#signup")}
-        </div>
-        <div className="navbar-option navbar-right">
-          {this.renderNavbarOption("Log In", "https://collegeprep.org/#login")}
-        </div>
-      </div>
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">CollegePrep.org</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+  </ul>
+</nav>
     );
   }
 }
-/*
-class SelectionBox extends React.Component {
-  render() {
-    return (
-    <div className="selectionBox">
-       <div id="bold-item"> {this.props.heading} </div>
-        <div>{this.props.p}</div>
-        <br />
-        <div className="testimony">
-          <div className="circle"></div>
-          <div>{this.props.testimonyText}</div>
-          <br />
-          <div>{this.props.testimonyPerson}</div>
-        </div>
-        
-    </div>
-      )
-  }
-}
-*/
 
 // separation of selection box --> avatar, person's name, testimony
 
@@ -96,18 +73,52 @@ class Textbox extends React.Component {
 class Testimony extends React.Component {
   render () {
     return (
-      <div className="col-2">
-        <div id="col1">
+      <div className="col">
+        <div className="col1">
           <Avatar img={this.props.img} />
           <PersonInfo name={this.props.name} grade={this.props.grade} />
         </div>
-        <div id="col2">
-          <Textbox text="hey this is great!" />
+        <div className="col2">
+          <Textbox text={this.props.content} />
         </div>
       </div>
       
       )
   } 
+}
+
+
+/* Dropdown options */
+class Dropdown extends React.Component {
+  render () {
+    return (
+  <div class="dropdown">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Subject
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">ACT</a>
+    <a class="dropdown-item" href="#">SAT</a>
+  </div>
+</div> )
+  }
+}
+
+/* Input box */
+class InputBox extends React.Component {
+  render () {
+    return (
+      <div class="col">
+        <div class="form-group">
+          <label for="usr">CP Email:</label>
+          <input type="text" class="form-control" id="usr" />
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" />
+        </div>
+      </div> )
+  }
 }
 
 
@@ -117,8 +128,12 @@ class Main extends React.Component {
     return (
       <div>
         <Navbar />
+        <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th" content="This is my comment."/>
+        <div className="col">
+          <InputBox />
+          <Dropdown />  
+        </div>
 
-        <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="john" grade="10th" />
       </div>
     );
   }

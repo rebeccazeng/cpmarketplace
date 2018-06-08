@@ -4,7 +4,10 @@
   "description": "A model of the CP Marketplace dashboard and functionality.",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "reactdom": "^2.0.0"

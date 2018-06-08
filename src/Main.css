@@ -33,14 +33,6 @@ ol, ul {
   float: right;
 }
 
-.selectionBox {
-  text-align: center;
-  float: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding: 2em 2em;
-  border: .1em solid black;
-}
 
 .circle {
   height: 7em;
@@ -60,4 +52,19 @@ ol, ul {
   display: flex;
   align-items: center;
   padding: 1em;
+}
+
+.col {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.col2 {
+  align-content: center;
+  padding-left: 1em;
+}
+
+.form-group {
+  width: auto;
 }

@@ -1,28 +1,4 @@
-body {
-  font: 14px "Arial", sans-serif;
-  margin: 20px;
-}
 
-ol, ul {
-  padding-left: 30px;
-}
-
-.navbar {
-  background: #fff;
-  border: 1px solid #999;
-  height: 34px
-}
-
-.navbar-option {
-  background: #fff;
-  border: 0px solid #999;
-  float: left;
-  font-weight: none;
-  line-height: 34px;
-  height: 34px;
-  padding: 0px 15px;
-  text-align: center;
-}
 
 #bold-item {
   font-weight: bold;
@@ -32,6 +8,8 @@ ol, ul {
   text-align: right;
   float: right;
 }
+
+
 
 
 .circle {

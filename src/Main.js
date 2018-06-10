@@ -21,20 +21,20 @@ class Navbar extends React.Component {
   render() {
     return (
    <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-  <ul className="navbar-nav">
-    <li className="nav-item active">
-      <a className="nav-link" href="#">CollegePrep.org</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="#">Link</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="#">Link</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="#">Link</a>
-    </li>
-  </ul>
+    <ul className="navbar-nav">
+      <li className="nav-item active">
+        <a className="nav-link" href="#">CollegePrep.org</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Link</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Link</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Link</a>
+      </li>
+    </ul>
 </nav>
     );
   }
@@ -46,7 +46,7 @@ class Navbar extends React.Component {
 class Avatar extends React.Component {
   render () {
     return (
-      <div className="circle"><img className="avatar" src={this.props.img} /></div>
+      <img className="circle avatar" src={this.props.img} />
       )
   }
 }
@@ -64,12 +64,12 @@ class Avatar extends React.Component {
 class Testimony extends React.Component {
   render () {
     return (
-      <div className="container row">
-        <div className="col-sm" align="center">
+      <div className="d-flex p-3 align-items-center">
+        <div className="p-2">
           <Avatar img={this.props.img} />
-          <p> {this.props.name}, {this.props.grade} </p>
+          <p align="center"> {this.props.name}, {this.props.grade} </p>
         </div>
-        <div className="col-sm" >
+        <div className="p-2">
           <p> {this.props.content} </p>
         </div>
       </div>
@@ -132,12 +132,8 @@ class Main extends React.Component {
         <div>
           <Navbar />
         </div>
-        <div className = "container row">
-        <div>
-          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
-          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
-        </div>
-        <div>
+        <div className="container-fluid row">
+        <div className="col-2">
           <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
           <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
         </div>

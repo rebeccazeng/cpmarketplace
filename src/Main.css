@@ -39,7 +39,7 @@ ol, ul {
   width: 7em;
   border-radius: 50%;
   margin-top: 1em;
-  background-color: #3d9970;
+  background-color: none;
 }
 
 .avatar {
@@ -51,20 +51,9 @@ ol, ul {
 .testimony {
   display: flex;
   align-items: center;
-  padding: 1em;
-}
-
-.col {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-}
-
-.col2 {
-  align-content: center;
-  padding-left: 1em;
+  padding-bottom: 1em;
 }
 
 .form-group {
-  width: auto;
+  width: 15em;
 }

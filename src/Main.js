@@ -20,19 +20,19 @@ class Navbar extends React.Component {
 
   render() {
     return (
-   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">CollegePrep.org</a>
+   <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul className="navbar-nav">
+    <li className="nav-item active">
+      <a className="nav-link" href="#">CollegePrep.org</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+    <li className="nav-item">
+      <a className="nav-link" href="#">Link</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+    <li className="nav-item">
+      <a className="nav-link" href="#">Link</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+    <li className="nav-item">
+      <a className="nav-link" href="#">Link</a>
     </li>
   </ul>
 </nav>
@@ -52,34 +52,25 @@ class Avatar extends React.Component {
 }
 
 /* Person's name */
-class PersonInfo extends React.Component {
-  render () {
-    return (
-      <div className="bold-item">-{this.props.name}, {this.props.grade}</div>
-      )
-  }
-}
-
-/* Text */
-class Textbox extends React.Component {
-  render () {
-    return (
-      <div>{this.props.text}</div>
-      )
-  }
-}
+// class PersonInfo extends React.Component {
+//   render () {
+//     return (
+//       <div className="bold-item">-{this.props.name}, {this.props.grade}</div>
+//       )
+//   }
+// }
 
 /* Testimony */
 class Testimony extends React.Component {
   render () {
     return (
-      <div className="col">
-        <div className="col1">
+      <div className="container row">
+        <div className="col-sm" align="center">
           <Avatar img={this.props.img} />
-          <PersonInfo name={this.props.name} grade={this.props.grade} />
+          <p> {this.props.name}, {this.props.grade} </p>
         </div>
-        <div className="col2">
-          <Textbox text={this.props.content} />
+        <div className="col-sm" >
+          <p> {this.props.content} </p>
         </div>
       </div>
       
@@ -92,13 +83,13 @@ class Testimony extends React.Component {
 class Dropdown extends React.Component {
   render () {
     return (
-  <div class="dropdown">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+  <div className="dropdown">
+  <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">
     Subject
   </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">ACT</a>
-    <a class="dropdown-item" href="#">SAT</a>
+  <div className="dropdown-menu">
+    <a className="dropdown-item" href="#">ACT</a>
+    <a className="dropdown-item" href="#">SAT</a>
   </div>
 </div> )
   }
@@ -108,16 +99,27 @@ class Dropdown extends React.Component {
 class InputBox extends React.Component {
   render () {
     return (
-      <div class="col">
-        <div class="form-group">
+      <div className="container">
+        <div className="form-group">
           <label for="usr">CP Email:</label>
-          <input type="text" class="form-control" id="usr" />
+          <input type="text" className="form-control" id="usr" />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="pwd">Password:</label>
-          <input type="password" class="form-control" id="pwd" />
+          <input type="password" className="form-control" id="pwd" />
         </div>
       </div> )
+  }
+}
+
+class SelectionBox extends React.Component {
+  render() {
+    return (
+        <div>
+          <InputBox />
+          <Dropdown />
+        </div>
+      )
   }
 }
 
@@ -127,11 +129,21 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th" content="This is my comment."/>
+        <div>
+          <Navbar />
+        </div>
+        <div className = "container row">
+        <div>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
+        </div>
+        <div>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
+        </div>
+        </div>
         <div className="col">
-          <InputBox />
-          <Dropdown />  
+         <SelectionBox />
         </div>
 
       </div>

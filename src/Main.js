@@ -7,16 +7,7 @@ import "../node_modules/jquery/src/jquery.js"
 import "../node_modules/popper.js/dist/popper.min.js"
 
 
-class NavbarOption extends React.Component {
-  render() {
-    return <a href={this.props.link}>{this.props.text}</a>;
-  }
-}
-
 class Navbar extends React.Component {
-  renderNavbarOption(option, link) {
-    return <NavbarOption text={option} link={link} />;
-  }
 
   render() {
     return (
@@ -71,7 +62,7 @@ class Testimony extends React.Component {
 
 
 /* Dropdown options */
-class Dropdown extends React.Component {
+class DropdownPrev extends React.Component {
   render () {
     return (
   <div className="dropdown">
@@ -86,18 +77,46 @@ class Dropdown extends React.Component {
   }
 }
 
+// TODO: continue exploring how to loop over all the options posted 
+// so that we can use Dropdown generically
+
+// class DropdownOption extends React.Component {
+//   render() {
+//     return <a href={this.props.link}>{this.props.text}</a>;
+//   }
+// }
+
+/* More generalized dropdown option */
+// class Dropdown extends React.Component {
+//   renderDropdownOption(option, link) {
+//     return <NavbarOption text={option} link={link} />;
+//   }
+//   renderDropdownTitle() {
+//        <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+//         Subject
+//       </button>
+//   }
+//   render () {
+//     return (
+//       <div>
+//       this.renderDropdownTitle();
+//       var options = {this.props.options};
+//       for (var i = 0; i < options.length; i++) {
+//         this.renderDropdownOption(options[i]);
+//       }
+//       </div>
+//       )
+//   }
+// }
+
 /* Input box */
 class InputBox extends React.Component {
   render () {
     return (
       <div className="container">
         <div className="form-group">
-          <label for="usr">CP Email:</label>
-          <input type="text" className="form-control" id="usr" />
-        </div>
-        <div className="form-group">
-          <label for="pwd">Password:</label>
-          <input type="password" className="form-control" id="pwd" />
+          <label for="usr">{this.props.title}</label>
+          <input type="text" className="form-control" id={this.props.id} />
         </div>
       </div> )
   }
@@ -107,12 +126,13 @@ class SelectionBox extends React.Component {
   render() {
     return (
         <div>
-          <InputBox />
-          <Dropdown />
+          <InputBox id="usr" title="Username" />
+          <DropdownPrev />
         </div>
       )
   }
 }
+
 
 
 /* Building the main page */

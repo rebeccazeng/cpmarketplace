@@ -51,15 +51,6 @@ class Avatar extends React.Component {
   }
 }
 
-/* Person's name */
-// class PersonInfo extends React.Component {
-//   render () {
-//     return (
-//       <div className="bold-item">-{this.props.name}, {this.props.grade}</div>
-//       )
-//   }
-// }
-
 /* Testimony */
 class Testimony extends React.Component {
   render () {
@@ -133,16 +124,20 @@ class Main extends React.Component {
           <Navbar />
         </div>
         <div className="container-fluid row">
-        <div className="col-2">
+        <div className="col-sm-5">
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
+        </div>
+        <div className="col-sm-5">
           <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
           <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
         </div>
         </div>
-        <div className="col">
+        <div className="col-sm-5">
          <SelectionBox />
         </div>
+        </div>
 
-      </div>
     );
   }
 }

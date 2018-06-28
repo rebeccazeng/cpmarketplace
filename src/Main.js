@@ -33,22 +33,13 @@ class Navbar extends React.Component {
 
 // separation of selection box --> avatar, person's name, testimony
 
-/* Avatar */
-class Avatar extends React.Component {
-  render () {
-    return (
-      <img className="circle avatar" src={this.props.img} />
-      )
-  }
-}
-
 /* Testimony */
 class Testimony extends React.Component {
   render () {
     return (
       <div className="d-flex p-3 align-items-center">
         <div className="p-2">
-          <Avatar img={this.props.img} />
+          <img className="circle avatar" src={this.props.img} />
           <p align="center"> {this.props.name}, {this.props.grade} </p>
         </div>
         <div className="p-2">
@@ -145,19 +136,18 @@ class Main extends React.Component {
         </div>
         <div className="container-fluid row">
         <div className="col-sm-5">
-          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
-          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="Abigail" grade="9th grade" content="CollegePrep is easily the best place that I know for learning ACT and SAT. I would really like to thank all of you guys for making this possible!"/>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="Bob" grade="10th grade" content="Thanks for creating this platform! I was able to get the help that I needed to improve my score, for free! The test would have been so much more difficult without this help."/>
         </div>
         <div className="col-sm-5">
-          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
-          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="John" grade="10th grade" content="This is my comment."/>
-        </div>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="Cathy" grade="11th grade" content="I really enjoyed using this platform to get a tutor. At the time, I did not know which tutoring company to use, but I am glad CollegePrep was easy to use, and the tutors were really friendly."/>
+          <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="Dwight" grade="12th grade" content="Before using CollegePrep, I did not really know where I could get quality help for a lower price. A lot of the companies online charge a lot and my family could not afford to pay. When using the help that CollegePrep offered, I was shocked at the quality and the price."/>
         </div>
         <div className="col-sm-5">
          <SelectionBox />
         </div>
         </div>
-
+      </div>
     );
   }
 }

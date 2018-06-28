@@ -53,52 +53,32 @@ class Testimony extends React.Component {
 
 
 /* Dropdown options */
-class DropdownPrev extends React.Component {
-  render () {
-    return (
-  <div className="dropdown">
-  <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-    Subject
-  </button>
-  <div className="dropdown-menu">
-    <a className="dropdown-item" href="#">ACT</a>
-    <a className="dropdown-item" href="#">SAT</a>
-  </div>
-</div> )
+
+ class Dropdown extends React.Component {
+  // @source: http://www.hackingwithreact.com/read/1/13/rendering-an-array-of-data-with-map-and-jsx
+  // @source: https://reactjs.org/docs/lists-and-keys.html
+  // TODO: take a look at changing the dropdown to reflect chosen item
+  // https://github.com/chrisharrington/demos/blob/gh-pages/react-controls/dropdown.html
+  renderDropdownOption(option) {
+    return ( 
+      <a className="dropdown-item" href="#">{option}</a>
+    )
   }
-}
-
-// TODO: continue exploring how to loop over all the options posted 
-// so that we can use Dropdown generically
-
-// class DropdownOption extends React.Component {
-//   render() {
-//     return <a href={this.props.link}>{this.props.text}</a>;
-//   }
-// }
-
-/* More generalized dropdown option */
-// class Dropdown extends React.Component {
-//   renderDropdownOption(option, link) {
-//     return <NavbarOption text={option} link={link} />;
-//   }
-//   renderDropdownTitle() {
-//        <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-//         Subject
-//       </button>
-//   }
-//   render () {
-//     return (
-//       <div>
-//       this.renderDropdownTitle();
-//       var options = {this.props.options};
-//       for (var i = 0; i < options.length; i++) {
-//         this.renderDropdownOption(options[i]);
-//       }
-//       </div>
-//       )
-//   }
-// }
+  render() {
+    return(
+      <div className="dropdown">
+        <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Subject
+        </button>
+        <div className="dropdown-menu">
+          {this.props.options.map((option) => (
+              <a className="dropdown-item">{option}</a>
+            ))}
+        </div>
+      </div>
+    ) 
+  }
+ }
 
 /* Input box */
 class InputBox extends React.Component {
@@ -118,7 +98,7 @@ class SelectionBox extends React.Component {
     return (
         <div>
           <InputBox id="usr" title="Username" />
-          <DropdownPrev />
+          <Dropdown options={["ACT", "SAT"]} />
         </div>
       )
   }

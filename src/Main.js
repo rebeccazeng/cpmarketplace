@@ -98,7 +98,7 @@ class SelectionBox extends React.Component {
     return (
         <div>
           <InputBox id="usr" title="Username" />
-          <Dropdown options={["ACT", "SAT"]} />
+          <Dropdown options={this.props.options} />
         </div>
       )
   }
@@ -124,7 +124,7 @@ class Main extends React.Component {
           <Testimony img="https://4.bp.blogspot.com/-h9fOaNMJsms/ToQ6XY_5__I/AAAAAAAAAf8/-DWR5VhIkC0/s1600/1178525479930832-cho-con-1-788229.jpg" name="Dwight" grade="12th grade" content="Before using CollegePrep, I did not really know where I could get quality help for a lower price. A lot of the companies online charge a lot and my family could not afford to pay. When using the help that CollegePrep offered, I was shocked at the quality and the price."/>
         </div>
         <div className="col-sm-5">
-         <SelectionBox />
+         <SelectionBox options={["ACT", "SAT"]} />
         </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ var Form = require('./components/Form.jsx')
 window.onload = function() {
   ReactDOM.render(
     <Form />,
-    document.getElementById('registration-form')
+    document.querySelector('#root')
+
   )
 }

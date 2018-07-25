@@ -1,11 +1,13 @@
-import React from "react";
+// import React from "react";
 import ReactDOM from "react-dom";
 import App from "./Main.js";
-import Form from "./Form.js";
-import BasicInfo from "./BasicInfo.js";
 
+var React        = require('react')
+var Form = require('./components/Form.jsx')
 
-ReactDOM.render(
-  <App />,
-  document.getElementById("root")
-);
+window.onload = function() {
+  ReactDOM.render(
+    <Form />,
+    document.getElementById('registration-form')
+  )
+}

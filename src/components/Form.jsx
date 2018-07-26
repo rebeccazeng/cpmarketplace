@@ -70,7 +70,7 @@ class Form extends React.Component {
 
   render() {
     var style = {
-      width : (this.state.step / 4 * 100) + '%'
+      width : (this.state.step / 2  * 100) + '%'
     }
 
     return (

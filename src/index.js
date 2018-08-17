@@ -1,14 +1,9 @@
-// import React from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import App from "./Main.js";
+import Tutor from './Tutor';
 
-var React        = require('react')
-var Form = require('./components/Form.jsx')
+// const Index = () => {
+//   return <div>Hello React!</div>;
+// };
 
-window.onload = function() {
-  ReactDOM.render(
-    <Form />,
-    document.querySelector('#root')
-
-  )
-}
+ReactDOM.render(<Tutor />, document.getElementById("index"));

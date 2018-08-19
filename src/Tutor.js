@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import TutorBasicInfo from './TutorBasicInfo';
-import StepZilla from '../node_modules/react-stepzilla/src/main';
+import MultiStep from '../node_modules/react-multistep/src/index';
 
 
-export default class Tutor extends Component {
-	render () {
-		const steps =
-		    [
-		      {name: 'Tutor Basic Info', component: <TutorBasicInfo />},
-		    ]
-		return (
-			<div className='step-progress'>
-			    <StepZilla steps={steps}/>
-			</div>
-		)
-	}
+class Tutor extends React.Component {
+  render() {
+  	const steps = [
+              {name: 'StepOne', component: <TutorBasicInfo/>},
+            ];
+    return (
+      <div>
+      	<Multistep showNavigation={true} steps={steps}/>
+      </div>
+    )
+  }
 }
+
+ReactDOM.render(<Tutor />, document.getElementById("index"))
